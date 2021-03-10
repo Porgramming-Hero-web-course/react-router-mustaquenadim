@@ -5,10 +5,9 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const League = (props) => {
     const {idLeague, strLeague, strSport} = props.league;
-    // style="width: 18rem;"
     return (
         <div className="col-lg-4">
-            <div className="card text-center bg-info custom-card">
+            <div className="card text-center custom-card">
                 <div className="card-body">
                     <h5 className="card-title font-weight-bold">{strLeague}</h5>
                     <p className="card-text font-weight-normal">Sports type: {strSport}</p>
