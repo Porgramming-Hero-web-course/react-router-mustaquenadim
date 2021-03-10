@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+/* custom css */
+
+.custom-bg {
+    background-color: #0E0A2A;
+}
+
+.custom-card {
+    margin: 10px;
+}
+
+.custom-banner {
+    width: 100%;
+    height: 30%;
+    background-image: url('./assets/banner.jpg');
+}
+
+.custom-logo {
+    width: 35%;
+}
+
+.conditional-image {
+    width: 100%;
+}
+
+.custom-icon {
+    width: 75px;
+    height: 75px;
+}
