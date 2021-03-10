@@ -18,7 +18,7 @@ const LeagueDetails = () => {
         fetch(url)
             .then((response) => response.json())
             .then((data) => setLeague(data.leagues[0]));
-    });
+    }, [leagueID]);
 
     const {
         strLogo,
