@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import banner from '../../assets/banner.jpg'
 import maleImg from '../../assets/male.png';
 import femaleImg from '../../assets/female.png';
 import twitterLogo from '../../assets/Twitter.png';
@@ -55,9 +54,9 @@ const LeagueDetails = () => {
                         <div className="col-md-4">
                             {
                                 strGender === 'Male' ? (
-                                    <img className="conditional-image" src={maleImg} alt='Male Image'/>
+                                    <img className="conditional-image" src={maleImg} alt='Male'/>
                                 ) : (
-                                    <img className="conditional-image" src={femaleImg} alt='Female Image'/>
+                                    <img className="conditional-image" src={femaleImg} alt='Female'/>
                                 )
                             }
                         </div>

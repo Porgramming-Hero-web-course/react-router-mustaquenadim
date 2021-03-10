@@ -22,7 +22,7 @@ const Home = () => {
             <div className='container'>
                 <div className='row'>
                     {
-                        leagues.map((league) => (<League league={league}></League>))
+                        leagues.map((league) => (<League key={league.idLeague} league={league}></League>))
                     }
                 </div>
             </div>
