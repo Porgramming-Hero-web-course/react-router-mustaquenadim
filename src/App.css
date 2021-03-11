@@ -39,6 +39,7 @@
 
 /* custom css */
 
+/* Home Page Style */
 .custom-bg {
     background-color: #0E0A2A;
 }
@@ -58,32 +59,9 @@
     height: 250px;
     background-image: url('./assets/banner.jpg');
 }
+/* End Home Page Style */
 
-.custom-banner {
-    width: 100%;
-    height: 350px;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    /* height: 100%;
-    width: 100%; */
-    opacity: 0.6;
-    transition: .3s ease;
-    background-color: black;
-    z-index: -1;
-}
-
-.custom-logo {
-    width: 35%;
-    margin-top: -350px;
-    z-index: 9;
-}
-
+/* LeagueDetails Page Style */
 .conditional-image {
     width: 100%;
 }
@@ -91,4 +69,38 @@
 .custom-icon {
     width: 75px;
     height: 75px;
+}
+/* End LeagueDetails Page Style */
+
+/* test */
+
+
+.custom-banner {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.banner, .logo {
+  display: block;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  width: 35% !important;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7); /* Black see-through */
+  width: 100%;
+  height: 100%;
+  padding: 100px;
 }

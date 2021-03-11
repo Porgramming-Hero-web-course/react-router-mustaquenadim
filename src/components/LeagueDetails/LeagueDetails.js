@@ -38,107 +38,115 @@ const LeagueDetails = () => {
         strYoutube,
     } = league;
     return (
-        <div className='custom-bg'>
-            <div>
-                <div>
-                    <img
-                        className='custom-banner'
-                        src={strFanart2}
-                        alt='League Banner'
-                    />
-                    <div className='overlay'></div>
-                </div>
-                <div className='text-center'>
-                    <img
-                        className='custom-logo'
-                        src={strLogo}
-                        alt='League Logo'
-                    />
+        <>
+            <div className='custom-banner'>
+                <img src={strFanart2} alt='League Banner' className='banner' />
+                <div className='overlay'>
+                    <img src={strLogo} alt='League Logo' className='m-auto logo' />
                 </div>
             </div>
-            <div className='container'>
-                <div className='card mb-3 bg-primary my-3'>
-                    <div className='row no-gutters p-1'>
-                        <div className='col-md-8'>
-                            <div className='card-body'>
-                                <h4 className='card-title text-danger font-weight-bold'>
-                                    {strLeague}
-                                </h4>
-                                <p className='card-text text-white font-weight-bold'>
-                                    <FontAwesomeIcon icon={faMapMarkerAlt} />{' '}
-                                    Founded: {intFormedYear}
-                                </p>
-                                <p className='card-text text-white font-weight-bold'>
-                                    <FontAwesomeIcon icon={faFlag} /> Country:{' '}
-                                    {strCountry}
-                                </p>
-                                <p className='card-text text-white font-weight-bold'>
-                                    <FontAwesomeIcon icon={faFutbol} /> Sport
-                                    Type: {strSport}
-                                </p>
-                                <p className='card-text text-white font-weight-bold'>
-                                    <FontAwesomeIcon icon={faVenusMars} />{' '}
-                                    Gender: {strGender}
-                                </p>
+            <div className='custom-bg'>
+                <div className='container'>
+                    <div className='card mb-3 bg-primary'>
+                        <div className='row no-gutters p-1'>
+                            <div className='col-md-8'>
+                                <div className='card-body'>
+                                    <h4 className='card-title text-danger font-weight-bold'>
+                                        {strLeague}
+                                    </h4>
+                                    <p className='card-text text-white font-weight-bold'>
+                                        <FontAwesomeIcon
+                                            icon={faMapMarkerAlt}
+                                        />{' '}
+                                        Founded: {intFormedYear}
+                                    </p>
+                                    <p className='card-text text-white font-weight-bold'>
+                                        <FontAwesomeIcon icon={faFlag} />{' '}
+                                        Country: {strCountry}
+                                    </p>
+                                    <p className='card-text text-white font-weight-bold'>
+                                        <FontAwesomeIcon icon={faFutbol} />{' '}
+                                        Sport Type: {strSport}
+                                    </p>
+                                    <p className='card-text text-white font-weight-bold'>
+                                        <FontAwesomeIcon icon={faVenusMars} />{' '}
+                                        Gender: {strGender}
+                                    </p>
+                                </div>
+                            </div>
+                            <div className='col-md-4 py-2'>
+                                {strGender === 'Male' ? (
+                                    <img
+                                        className='conditional-image'
+                                        src={maleImg}
+                                        alt='Male'
+                                    />
+                                ) : (
+                                    <img
+                                        className='conditional-image'
+                                        src={femaleImg}
+                                        alt='Female'
+                                    />
+                                )}
                             </div>
                         </div>
-                        <div className='col-md-4'>
-                            {strGender === 'Male' ? (
+                    </div>
+                    <div>
+                        <p className='card-text text-white'>
+                            {strDescriptionEN}
+                        </p>
+                        <div className='text-center pb-3'>
+                            <a
+                                href={
+                                    { strTwitter } == null
+                                        ? 'https://www.twitter.com'
+                                        : `https://${strTwitter}`
+                                }
+                                target='_blank'
+                                rel='noreferrer noopener'
+                            >
                                 <img
-                                    className='conditional-image'
-                                    src={maleImg}
-                                    alt='Male'
+                                    className='custom-icon'
+                                    src={twitterLogo}
+                                    alt='Twitter'
                                 />
-                            ) : (
+                            </a>
+                            <a
+                                href={
+                                    { strFacebook } == null
+                                        ? 'https://www.facebook.com'
+                                        : `https://${strFacebook}`
+                                }
+                                target='_blank'
+                                rel='noreferrer noopener'
+                            >
                                 <img
-                                    className='conditional-image'
-                                    src={femaleImg}
-                                    alt='Female'
+                                    className='custom-icon'
+                                    src={facebookLogo}
+                                    alt='Facebook'
                                 />
-                            )}
+                            </a>
+                            <a
+                                href={
+                                    { strYoutube } == null ||
+                                    { strYoutube } === ''
+                                        ? `https://www.youtube.com`
+                                        : `https://${strYoutube}`
+                                }
+                                target='_blank'
+                                rel='noreferrer noopener'
+                            >
+                                <img
+                                    className='custom-icon'
+                                    src={youTubeLogo}
+                                    alt='YouTube'
+                                />
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <p className='card-text text-white'>{strDescriptionEN}</p>
-                    <div className='text-center pb-3'>
-                        <a
-                            href={{strTwitter} == null ? 'https://www.twitter.com' : `https://${strTwitter}`}
-                            target='_blank'
-                            rel='noreferrer noopener'
-                        >
-                            <img
-                                className='custom-icon'
-                                src={twitterLogo}
-                                alt='Twitter'
-                            />
-                        </a>
-                        <a
-                            href={{strFacebook} == null ? 'https://www.facebook.com' : `https://${strFacebook}`}
-                            target='_blank'
-                            rel='noreferrer noopener'
-                        >
-                            <img
-                                className='custom-icon'
-                                src={facebookLogo}
-                                alt='Facebook'
-                            />
-                        </a>
-                        <a
-                            href={({strYoutube} == null) || ({strYoutube} === '') ? `https://www.youtube.com` : `https://${strYoutube}`}
-                            target='_blank'
-                            rel='noreferrer noopener'
-                        >
-                            <img
-                                className='custom-icon'
-                                src={youTubeLogo}
-                                alt='YouTube'
-                            />
-                        </a>
-                    </div>
-                </div>
             </div>
-        </div>
+        </>
     );
 };
 
