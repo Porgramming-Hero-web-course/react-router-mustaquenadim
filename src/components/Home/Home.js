@@ -13,7 +13,7 @@ const Home = () => {
         <div className='custom-bg'>
             <div className='home-banner w-100'>
                 <div className='container'>
-                    <h1 className='display-3 text-center text-white py-5 font-weight-bold'>Sports League</h1>
+                    <h1 className='display-3 text-center text-white text-uppercase py-5 font-weight-bold'>Sports League</h1>
                 </div>
             </div>
             <div className='container my-3'>

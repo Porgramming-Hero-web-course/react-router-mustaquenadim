@@ -7,7 +7,7 @@ import facebookLogo from '../../assets/Facebook.png';
 import youTubeLogo from '../../assets/YouTube.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faMapMarkerAlt,
+    faClock,
     faFlag,
     faFutbol,
     faVenusMars,
@@ -59,12 +59,12 @@ const LeagueDetails = () => {
                         <div className='row no-gutters p-1'>
                             <div className='col-md-8'>
                                 <div className='card-body'>
-                                    <h4 className='card-title text-danger font-weight-bold'>
+                                    <h4 className='card-title text-uppercase text-danger font-weight-bold'>
                                         {strLeague}
                                     </h4>
                                     <p className='card-text text-white font-weight-bold'>
                                         <FontAwesomeIcon
-                                            icon={faMapMarkerAlt}
+                                            icon={faClock}
                                         />{' '}
                                         Founded: {intFormedYear}
                                     </p>
