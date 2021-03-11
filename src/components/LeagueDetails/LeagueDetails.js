@@ -42,7 +42,11 @@ const LeagueDetails = () => {
             <div className='custom-banner'>
                 <img src={strFanart2} alt='League Banner' className='banner' />
                 <div className='overlay'>
-                    <img src={strLogo} alt='League Logo' className='m-auto logo' />
+                    <img
+                        src={strLogo}
+                        alt='League Logo'
+                        className='m-auto logo'
+                    />
                 </div>
             </div>
             <div className='custom-bg'>
@@ -98,7 +102,7 @@ const LeagueDetails = () => {
                         <div className='text-center pb-3'>
                             <a
                                 href={
-                                    { strTwitter } == null
+                                    (strTwitter  === '')
                                         ? 'https://www.twitter.com'
                                         : `https://${strTwitter}`
                                 }
@@ -113,7 +117,7 @@ const LeagueDetails = () => {
                             </a>
                             <a
                                 href={
-                                    { strFacebook } == null
+                                    (strFacebook === '')
                                         ? 'https://www.facebook.com'
                                         : `https://${strFacebook}`
                                 }
@@ -128,9 +132,8 @@ const LeagueDetails = () => {
                             </a>
                             <a
                                 href={
-                                    { strYoutube } == null ||
-                                    { strYoutube } === ''
-                                        ? `https://www.youtube.com`
+                                    (strYoutube === '')
+                                        ? 'https://www.youtube.com'
                                         : `https://${strYoutube}`
                                 }
                                 target='_blank'
