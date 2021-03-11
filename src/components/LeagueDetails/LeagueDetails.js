@@ -25,7 +25,7 @@ const LeagueDetails = () => {
     }, [leagueID]);
 
     const {
-        strFanart2,
+        strBanner,
         strLogo,
         strLeague,
         intFormedYear,
@@ -39,19 +39,23 @@ const LeagueDetails = () => {
     } = league;
     return (
         <>
-            <div className='custom-banner'>
-                <img src={strFanart2} alt='League Banner' className='banner' />
-                <div className='overlay'>
-                    <img
-                        src={strLogo}
-                        alt='League Logo'
-                        className='m-auto logo'
-                    />
-                </div>
-            </div>
             <div className='custom-bg'>
+                <div className='custom-banner'>
+                    <img
+                        src={strBanner}
+                        alt='League Banner'
+                        className='banner'
+                    />
+                    <div className='overlay'>
+                        <img
+                            src={strLogo}
+                            alt='League Logo'
+                            className='m-auto logo'
+                        />
+                    </div>
+                </div>
                 <div className='container'>
-                    <div className='card mb-3 bg-primary'>
+                    <div className='card my-3 bg-primary'>
                         <div className='row no-gutters p-1'>
                             <div className='col-md-8'>
                                 <div className='card-body'>
@@ -102,7 +106,7 @@ const LeagueDetails = () => {
                         <div className='text-center pb-3'>
                             <a
                                 href={
-                                    (strTwitter  === '')
+                                    strTwitter === ''
                                         ? 'https://www.twitter.com'
                                         : `https://${strTwitter}`
                                 }
@@ -117,7 +121,7 @@ const LeagueDetails = () => {
                             </a>
                             <a
                                 href={
-                                    (strFacebook === '')
+                                    strFacebook === ''
                                         ? 'https://www.facebook.com'
                                         : `https://${strFacebook}`
                                 }
@@ -132,7 +136,7 @@ const LeagueDetails = () => {
                             </a>
                             <a
                                 href={
-                                    (strYoutube === '')
+                                    strYoutube === ''
                                         ? 'https://www.youtube.com'
                                         : `https://${strYoutube}`
                                 }

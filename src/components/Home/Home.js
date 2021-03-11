@@ -16,7 +16,7 @@ const Home = () => {
                     <h1 className='display-3 text-center text-white py-5 font-weight-bold'>Sports League</h1>
                 </div>
             </div>
-            <div className='container'>
+            <div className='container my-3'>
                 <div className='row'>
                     {
                         leagues.map((league) => (<League key={league.idLeague} league={league}></League>))
