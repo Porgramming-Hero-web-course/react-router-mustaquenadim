@@ -16,6 +16,6 @@ In this project, I've tried to inform you about some of our sports clubs in the 
 
 ## Available Links
 
-[Visit Website](https://vigilant-knuth-dc9d81.netlify.app/) | [Watch Code](https://github.com/mustaquenadim/react-router)
+[Visit Website](https://vigilant-knuth-dc9d81.netlify.app/) | [Watch Code](https://github.com/mustaquenadim/sports-league)
 
 API: [TheSportsDB](https://www.thesportsdb.com/)
